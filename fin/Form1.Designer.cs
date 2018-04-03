@@ -92,6 +92,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.рассчитатьЗпToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновитьДанныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appDataa = new fin.appDataa();
+            this.личныеДанныеBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.личные_данныеTableAdapter1 = new fin.appDataaTableAdapters.Личные_данныеTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.личныеДанныеОкладBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.личныеДанныеBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
@@ -108,6 +111,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.appDataa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.личныеДанныеBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -616,6 +621,20 @@
             this.обновитьДанныеToolStripMenuItem.Text = "Обновить данные";
             this.обновитьДанныеToolStripMenuItem.Click += new System.EventHandler(this.обновитьДанныеToolStripMenuItem_Click);
             // 
+            // appDataa
+            // 
+            this.appDataa.DataSetName = "appDataa";
+            this.appDataa.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // личныеДанныеBindingSource1
+            // 
+            this.личныеДанныеBindingSource1.DataMember = "Личные данные";
+            this.личныеДанныеBindingSource1.DataSource = this.appDataa;
+            // 
+            // личные_данныеTableAdapter1
+            // 
+            this.личные_данныеTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,6 +679,8 @@
             this.panel.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.appDataa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.личныеДанныеBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -730,6 +751,9 @@
         private System.Windows.Forms.ToolStripMenuItem рассчитатьЗпToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обновитьДанныеToolStripMenuItem;
         private System.Windows.Forms.BindingSource личныеДанныеОкладBindingSource;
+        private appDataa appDataa;
+        private System.Windows.Forms.BindingSource личныеДанныеBindingSource1;
+        private appDataaTableAdapters.Личные_данныеTableAdapter личные_данныеTableAdapter1;
     }
 }
 

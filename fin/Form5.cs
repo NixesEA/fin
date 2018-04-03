@@ -19,6 +19,8 @@ namespace fin
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "appDataa._Расчет_з_п". При необходимости она может быть перемещена или удалена.
+            this.расчет_з_пTableAdapter1.Fill(this.appDataa._Расчет_з_п);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "appData._Расчет_з_п". При необходимости она может быть перемещена или удалена.
             this.расчет_з_пTableAdapter.Fill(this.appData._Расчет_з_п);
 
