@@ -19,9 +19,8 @@ namespace fin
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Больничный_лист". При необходимости она может быть перемещена или удалена.
-            this.больничный_листTableAdapter.Fill(this.appData.Больничный_лист);
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Больничный_лист". При необходимости она может быть перемещена или удалена.
+            this.больничный_листTableAdapter.Fill(this.data.Больничный_лист);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -30,7 +29,7 @@ namespace fin
             {
                 panel.Enabled = true;
                 txtName.Focus();
-                this.appData.Больничный_лист.AddБольничный_листRow(this.appData.Больничный_лист.NewБольничный_листRow());
+                this.data.Больничный_лист.AddБольничный_листRow(this.data.Больничный_лист.NewБольничный_листRow());
                 больничныйЛистBindingSource.MoveLast();
             }
             catch (Exception ex)
@@ -57,7 +56,7 @@ namespace fin
             try
             {
                 больничныйЛистBindingSource.EndEdit();
-                больничный_листTableAdapter.Update(this.appData.Больничный_лист);
+                больничный_листTableAdapter.Update(this.data.Больничный_лист);
                 panel.Enabled = false;
             }
             catch (Exception ex)

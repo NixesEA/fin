@@ -19,9 +19,8 @@ namespace fin
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Премия". При необходимости она может быть перемещена или удалена.
-            this.премияTableAdapter.Fill(this.appData.Премия);
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Премия". При необходимости она может быть перемещена или удалена.
+            this.премияTableAdapter.Fill(this.data.Премия);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -30,7 +29,7 @@ namespace fin
             {
                 panel.Enabled = true;
                 txtName.Focus();
-                this.appData.Премия.AddПремияRow(this.appData.Премия.NewПремияRow());
+                this.data.Премия.AddПремияRow(this.data.Премия.NewПремияRow());
                 премияBindingSource.MoveLast();
             }
             catch (Exception ex)
@@ -57,7 +56,7 @@ namespace fin
             try
             {
                 премияBindingSource.EndEdit();
-                премияTableAdapter.Update(this.appData.Премия);
+                премияTableAdapter.Update(this.data.Премия);
                 panel.Enabled = false;
             }
             catch (Exception ex)

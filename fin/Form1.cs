@@ -19,20 +19,17 @@ namespace fin
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appDataa.Личные_данные". При необходимости она может быть перемещена или удалена.
-            this.личные_данныеTableAdapter1.Fill(this.appDataa.Личные_данные);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Оклад". При необходимости она может быть перемещена или удалена.
-            this.окладTableAdapter.Fill(this.appData.Оклад);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Больничный_лист". При необходимости она может быть перемещена или удалена.
-            this.больничный_листTableAdapter.Fill(this.appData.Больничный_лист);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Надбавка". При необходимости она может быть перемещена или удалена.
-            this.надбавкаTableAdapter.Fill(this.appData.Надбавка);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Премия". При необходимости она может быть перемещена или удалена.
-            this.премияTableAdapter.Fill(this.appData.Премия);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Личные_данные". При необходимости она может быть перемещена или удалена.
-            this.личные_данныеTableAdapter.Fill(this.appData.Личные_данные);
-            личныеДанныеBindingSource.DataSource = this.appData.Личные_данные;
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Оклад". При необходимости она может быть перемещена или удалена.
+            this.окладTableAdapter.Fill(this.data.Оклад);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Премия". При необходимости она может быть перемещена или удалена.
+            this.премияTableAdapter.Fill(this.data.Премия);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Надбавка". При необходимости она может быть перемещена или удалена.
+            this.надбавкаTableAdapter.Fill(this.data.Надбавка);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Больничный_лист". При необходимости она может быть перемещена или удалена.
+            this.больничный_листTableAdapter.Fill(this.data.Больничный_лист);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Личные_данные". При необходимости она может быть перемещена или удалена.
+            this.личные_данныеTableAdapter.Fill(this.data.Личные_данные);
+           
         }
 
         private void txt(object sender, KeyPressEventArgs e)
@@ -47,13 +44,13 @@ namespace fin
             {
                 if (string.IsNullOrEmpty(txtSearch.Text))
                 {
-                    this.личные_данныеTableAdapter.Fill(this.appData.Личные_данные);
+                    this.личные_данныеTableAdapter.Fill(this.data.Личные_данные);
                     //личныеДанныеBindingSource.DataSource = this.appData.Личные_данные;
                     dataGridView1.DataSource = личныеДанныеBindingSource;
                 }
                 else
                 {
-                    var query = from o in this.appData.Личные_данные
+                    var query = from o in this.data.Личные_данные
                                 where Convert.ToString(o.Личный_номер).Contains(txtSearch.Text) || o.Должность == txtSearch.Text || o.Семейное_положение == txtSearch.Text || o.ФИО.Contains(txtSearch.Text)
                                 select o;
                     //личныеДанныеBindingSource.DataSource = query.ToList();
@@ -81,7 +78,7 @@ namespace fin
                 txtNomber.Enabled = true;
                 panel.Enabled = true;
                 txtName.Focus();
-                this.appData.Личные_данные.AddЛичные_данныеRow(this.appData.Личные_данные.NewЛичные_данныеRow());
+                this.data.Личные_данные.AddЛичные_данныеRow(this.data.Личные_данные.NewЛичные_данныеRow());
                 личныеДанныеBindingSource.MoveLast();
             }
             catch (Exception ex)
@@ -108,7 +105,7 @@ namespace fin
             try
             {
                 личныеДанныеBindingSource.EndEdit();
-                личные_данныеTableAdapter.Update(this.appData.Личные_данные);
+                личные_данныеTableAdapter.Update(this.data.Личные_данные);
                 panel.Enabled = false;
             }
             catch (Exception ex)
@@ -146,22 +143,18 @@ namespace fin
             newForm.Show();
         }
 
-        private void обновитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void обновитьТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Оклад". При необходимости она может быть перемещена или удалена.
-            this.окладTableAdapter.Fill(this.appData.Оклад);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Больничный_лист". При необходимости она может быть перемещена или удалена.
-            this.больничный_листTableAdapter.Fill(this.appData.Больничный_лист);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Надбавка". При необходимости она может быть перемещена или удалена.
-            this.надбавкаTableAdapter.Fill(this.appData.Надбавка);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Премия". При необходимости она может быть перемещена или удалена.
-            this.премияTableAdapter.Fill(this.appData.Премия);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Личные_данные". При необходимости она может быть перемещена или удалена.
-            this.личные_данныеTableAdapter.Fill(this.appData.Личные_данные);
-            личныеДанныеBindingSource.DataSource = this.appData.Личные_данные;
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Оклад". При необходимости она может быть перемещена или удалена.
+            this.окладTableAdapter.Fill(this.data.Оклад);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Премия". При необходимости она может быть перемещена или удалена.
+            this.премияTableAdapter.Fill(this.data.Премия);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Надбавка". При необходимости она может быть перемещена или удалена.
+            this.надбавкаTableAdapter.Fill(this.data.Надбавка);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Больничный_лист". При необходимости она может быть перемещена или удалена.
+            this.больничный_листTableAdapter.Fill(this.data.Больничный_лист);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Личные_данные". При необходимости она может быть перемещена или удалена.
+            this.личные_данныеTableAdapter.Fill(this.data.Личные_данные);
         }
-
-
-
     }
 }

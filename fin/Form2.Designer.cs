@@ -36,7 +36,7 @@
             this.panel = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.больничныйЛистBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.appData = new fin.appData();
+            this.data = new fin.Data();
             this.txtSpec = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,10 +47,10 @@
             this.личныйНомерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаЗаболеванияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаВыздоравленияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.больничный_листTableAdapter = new fin.appDataTableAdapters.Больничный_листTableAdapter();
+            this.больничный_листTableAdapter = new fin.DataTableAdapters.Больничный_листTableAdapter();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.больничныйЛистBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,12 +118,12 @@
             // больничныйЛистBindingSource
             // 
             this.больничныйЛистBindingSource.DataMember = "Больничный лист";
-            this.больничныйЛистBindingSource.DataSource = this.appData;
+            this.больничныйЛистBindingSource.DataSource = this.data;
             // 
-            // appData
+            // data
             // 
-            this.appData.DataSetName = "appData";
-            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.data.DataSetName = "Data";
+            this.data.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtSpec
             // 
@@ -171,7 +171,6 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -236,7 +235,7 @@
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.больничныйЛистBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -256,9 +255,9 @@
         private System.Windows.Forms.TextBox txtNomber;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private appData appData;
+        private Data data;
         private System.Windows.Forms.BindingSource больничныйЛистBindingSource;
-        private appDataTableAdapters.Больничный_листTableAdapter больничный_листTableAdapter;
+        private DataTableAdapters.Больничный_листTableAdapter больничный_листTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idЗаписиDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn личныйНомерDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn датаЗаболеванияDataGridViewTextBoxColumn;

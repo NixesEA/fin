@@ -19,9 +19,8 @@ namespace fin
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "appData.Надбавка". При необходимости она может быть перемещена или удалена.
-            this.надбавкаTableAdapter.Fill(this.appData.Надбавка);
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Надбавка". При необходимости она может быть перемещена или удалена.
+            this.надбавкаTableAdapter.Fill(this.data.Надбавка);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -30,7 +29,7 @@ namespace fin
             {
                 panel.Enabled = true;
                 txtName.Focus();
-                this.appData.Надбавка.AddНадбавкаRow(this.appData.Надбавка.NewНадбавкаRow());
+                this.data.Надбавка.AddНадбавкаRow(this.data.Надбавка.NewНадбавкаRow());
                 надбавкаBindingSource.MoveLast();
             }
             catch (Exception ex)
@@ -57,7 +56,7 @@ namespace fin
             try
             {
                 надбавкаBindingSource.EndEdit();
-                надбавкаTableAdapter.Update(this.appData.Надбавка);
+                надбавкаTableAdapter.Update(this.data.Надбавка);
                 panel.Enabled = false;
             }
             catch (Exception ex)
