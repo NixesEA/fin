@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Data" targetNamespace="http://tempuri.org/Data.xsd" xmlns:mstns="http://tempuri.org/Data.xsd" xmlns="http://tempuri.org/Data.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database1ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString1 (Settings)" PropertyReference="ApplicationSettings.fin.Properties.Settings.GlobalReference.Default.Database1ConnectionString1" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="расчет З/ПTableAdapter" GeneratorDataComponentClassName="расчет_З_ПTableAdapter" Name="расчет З/П" UserDataComponentName="расчет З/ПTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString1 (Settings)" DbObjectName="расчет З/П" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Личный номер], Оклад, Премия, Надбавки, [Вычет за болезни], [З/П] FROM [расчет З/П]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Личный номер" DataSetColumn="Личный номер" />
+              <Mapping SourceColumn="Оклад" DataSetColumn="Оклад" />
+              <Mapping SourceColumn="Премия" DataSetColumn="Премия" />
+              <Mapping SourceColumn="Надбавки" DataSetColumn="Надбавки" />
+              <Mapping SourceColumn="Вычет за болезни" DataSetColumn="Вычет за болезни" />
+              <Mapping SourceColumn="З/П" DataSetColumn="З/П" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="расчет надбавкиTableAdapter" GeneratorDataComponentClassName="расчет_надбавкиTableAdapter" Name="расчет надбавки" UserDataComponentName="расчет надбавкиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString1 (Settings)" DbObjectName="расчет надбавки" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Личный номер], Надбавка FROM [расчет надбавки]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Личный номер" DataSetColumn="Личный номер" />
+              <Mapping SourceColumn="Надбавка" DataSetColumn="Надбавка" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="расчет окладаTableAdapter" GeneratorDataComponentClassName="расчет_окладаTableAdapter" Name="расчет оклада" UserDataComponentName="расчет окладаTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString1 (Settings)" DbObjectName="расчет оклада" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Дней в месяце], [Личный номер], [Дней болезни], [Кол-во отработанных дней], Оклад, [Исходный оклад] FROM [расчет оклада]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Дней в месяце" DataSetColumn="Дней в месяце" />
+              <Mapping SourceColumn="Личный номер" DataSetColumn="Личный номер" />
+              <Mapping SourceColumn="Дней болезни" DataSetColumn="Дней болезни" />
+              <Mapping SourceColumn="Кол-во отработанных дней" DataSetColumn="Кол-во отработанных дней" />
+              <Mapping SourceColumn="Оклад" DataSetColumn="Оклад" />
+              <Mapping SourceColumn="Исходный оклад" DataSetColumn="Исходный оклад" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="расчет премииTableAdapter" GeneratorDataComponentClassName="расчет_премииTableAdapter" Name="расчет премии" UserDataComponentName="расчет премииTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString1 (Settings)" DbObjectName="расчет премии" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Личный номер], Премия FROM [расчет премии]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Личный номер" DataSetColumn="Личный номер" />
+              <Mapping SourceColumn="Премия" DataSetColumn="Премия" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Личные данныеTableAdapter" GeneratorDataComponentClassName="Личные_данныеTableAdapter" Name="Личные данные" UserDataComponentName="Личные данныеTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString1 (Settings)" DbObjectName="Личные данные" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Личные данные` WHERE ((`Личный номер` = ?) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) AND ((? = 1 AND `Должность` IS NULL) OR (`Должность` = ?)) AND ((? = 1 AND `Семейное положение` IS NULL) OR (`Семейное положение` = ?)) AND ((? = 1 AND `Кол-во детей` IS NULL) OR (`Кол-во детей` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ФИО" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ФИО" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_ФИО" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ФИО" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Должность" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Должность" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Должность" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Должность" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Семейное_положение" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Семейное положение" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Семейное_положение" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Семейное положение" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Кол-во_детей" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Кол-во детей" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Кол-во_детей" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Кол-во детей" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Личные данные` (`Личный номер`, `ФИО`, `Должность`, `Семейное положение`, `Кол-во детей`) VALUES (?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="ФИО" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ФИО" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Должность" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Должность" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Семейное_положение" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Семейное положение" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Кол-во_детей" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Кол-во детей" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Личный номер], ФИО, Должность, [Семейное положение], [Кол-во детей] FROM [Личные данные]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Личные данные` SET `Личный номер` = ?, `ФИО` = ?, `Должность` = ?, `Семейное положение` = ?, `Кол-во детей` = ? WHERE ((`Личный номер` = ?) AND ((? = 1 AND `ФИО` IS NULL) OR (`ФИО` = ?)) AND ((? = 1 AND `Должность` IS NULL) OR (`Должность` = ?)) AND ((? = 1 AND `Семейное положение` IS NULL) OR (`Семейное положение` = ?)) AND ((? = 1 AND `Кол-во детей` IS NULL) OR (`Кол-во детей` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="ФИО" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ФИО" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Должность" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Должность" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Семейное_положение" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Семейное положение" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Кол-во_детей" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Кол-во детей" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_ФИО" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ФИО" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_ФИО" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="ФИО" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Должность" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Должность" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Должность" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Должность" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Семейное_положение" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Семейное положение" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Семейное_положение" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Семейное положение" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Кол-во_детей" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Кол-во детей" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Кол-во_детей" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Кол-во детей" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Личный номер" DataSetColumn="Личный номер" />
+              <Mapping SourceColumn="ФИО" DataSetColumn="ФИО" />
+              <Mapping SourceColumn="Должность" DataSetColumn="Должность" />
+              <Mapping SourceColumn="Семейное положение" DataSetColumn="Семейное положение" />
+              <Mapping SourceColumn="Кол-во детей" DataSetColumn="Кол-во детей" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ОкладTableAdapter" GeneratorDataComponentClassName="ОкладTableAdapter" Name="Оклад" UserDataComponentName="ОкладTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString1 (Settings)" DbObjectName="Оклад" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Оклад` WHERE ((`Личный номер` = ?) AND ((? = 1 AND `Оклад` IS NULL) OR (`Оклад` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Оклад" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Оклад" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_Оклад" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Оклад" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Оклад` (`Личный номер`, `Оклад`) VALUES (?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Оклад" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Оклад" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Личный номер], Оклад FROM Оклад</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Оклад` SET `Личный номер` = ?, `Оклад` = ? WHERE ((`Личный номер` = ?) AND ((? = 1 AND `Оклад` IS NULL) OR (`Оклад` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Оклад" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Оклад" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Оклад" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Оклад" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_Оклад" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Оклад" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Личный номер" DataSetColumn="Личный номер" />
+              <Mapping SourceColumn="Оклад" DataSetColumn="Оклад" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПремияTableAdapter" GeneratorDataComponentClassName="ПремияTableAdapter" Name="Премия" UserDataComponentName="ПремияTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString1 (Settings)" DbObjectName="Премия" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Премия` WHERE ((`id записи` = ?) AND ((? = 1 AND `Личный номер` IS NULL) OR (`Личный номер` = ?)) AND ((? = 1 AND `Размер премии` IS NULL) OR (`Размер премии` = ?)) AND ((? = 1 AND `Дата` IS NULL) OR (`Дата` = ?)) AND ((? = 1 AND `Описание` IS NULL) OR (`Описание` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_id_записи" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="id записи" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Размер_премии" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Размер премии" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_Размер_премии" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Размер премии" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Описание" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Описание" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Описание" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Описание" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Премия` (`Личный номер`, `Размер премии`, `Дата`, `Описание`) VALUES (?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Размер_премии" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Размер премии" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Описание" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Описание" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [id записи], [Личный номер], [Размер премии], Дата, Описание FROM Премия</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Премия` SET `Личный номер` = ?, `Размер премии` = ?, `Дата` = ?, `Описание` = ? WHERE ((`id записи` = ?) AND ((? = 1 AND `Личный номер` IS NULL) OR (`Личный номер` = ?)) AND ((? = 1 AND `Размер премии` IS NULL) OR (`Размер премии` = ?)) AND ((? = 1 AND `Дата` IS NULL) OR (`Дата` = ?)) AND ((? = 1 AND `Описание` IS NULL) OR (`Описание` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Размер_премии" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Размер премии" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Дата" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Описание" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Описание" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_id_записи" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="id записи" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Личный_номер" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Личный номер" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Размер_премии" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Размер премии" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="Original_Размер_премии" Precision="0" ProviderType="Currency" Scale="0" Size="0" SourceColumn="Размер премии" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Дата" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Дата" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Original_Дата" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Дата" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Описание" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Описание" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Описание" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Описание" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id записи" DataSetColumn="id записи" />
+              <Mapping SourceColumn="Личный номер" DataSetColumn="Личный номер" />
+              <Mapping SourceColumn="Размер премии" DataSetColumn="Размер премии" />
+              <Mapping SourceColumn="Дата" DataSetColumn="Дата" />
+              <Mapping SourceColumn="Описание" DataSetColumn="Описание" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Data" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Data" msprop:Generator_UserDSName="Data">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="расчет_x0020_З_x002F_П" msprop:Generator_TableClassName="_расчет_З_ПDataTable" msprop:Generator_TableVarName="_tableрасчет_З_П" msprop:Generator_TablePropName="_расчет_З_П" msprop:Generator_RowDeletingName="_расчет_З_ПRowDeleting" msprop:Generator_RowChangingName="_расчет_З_ПRowChanging" msprop:Generator_RowEvHandlerName="_расчет_З_ПRowChangeEventHandler" msprop:Generator_RowDeletedName="_расчет_З_ПRowDeleted" msprop:Generator_UserTableName="расчет З/П" msprop:Generator_RowChangedName="_расчет_З_ПRowChanged" msprop:Generator_RowEvArgName="_расчет_З_ПRowChangeEvent" msprop:Generator_RowClassName="_расчет_З_ПRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Личный_x0020_номер" msprop:Generator_ColumnVarNameInTable="columnЛичный_номер" msprop:Generator_ColumnPropNameInRow="Личный_номер" msprop:Generator_ColumnPropNameInTable="Личный_номерColumn" msprop:Generator_UserColumnName="Личный номер" type="xs:int" minOccurs="0" />
+              <xs:element name="Оклад" msprop:Generator_ColumnVarNameInTable="columnОклад" msprop:Generator_ColumnPropNameInRow="Оклад" msprop:Generator_ColumnPropNameInTable="ОкладColumn" msprop:Generator_UserColumnName="Оклад" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Премия" msprop:Generator_ColumnVarNameInTable="columnПремия" msprop:Generator_ColumnPropNameInRow="Премия" msprop:Generator_ColumnPropNameInTable="ПремияColumn" msprop:Generator_UserColumnName="Премия" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Надбавки" msprop:Generator_ColumnVarNameInTable="columnНадбавки" msprop:Generator_ColumnPropNameInRow="Надбавки" msprop:Generator_ColumnPropNameInTable="НадбавкиColumn" msprop:Generator_UserColumnName="Надбавки" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Вычет_x0020_за_x0020_болезни" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnВычет_за_болезни" msprop:Generator_ColumnPropNameInRow="Вычет_за_болезни" msprop:Generator_ColumnPropNameInTable="Вычет_за_болезниColumn" msprop:Generator_UserColumnName="Вычет за болезни" type="xs:decimal" minOccurs="0" />
+              <xs:element name="З_x002F_П" msprop:Generator_ColumnVarNameInTable="_columnЗ_П" msprop:Generator_ColumnPropNameInRow="_З_П" msprop:Generator_ColumnPropNameInTable="_З_ПColumn" msprop:Generator_UserColumnName="З/П" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="расчет_x0020_надбавки" msprop:Generator_TableClassName="расчет_надбавкиDataTable" msprop:Generator_TableVarName="tableрасчет_надбавки" msprop:Generator_TablePropName="расчет_надбавки" msprop:Generator_RowDeletingName="расчет_надбавкиRowDeleting" msprop:Generator_RowChangingName="расчет_надбавкиRowChanging" msprop:Generator_RowEvHandlerName="расчет_надбавкиRowChangeEventHandler" msprop:Generator_RowDeletedName="расчет_надбавкиRowDeleted" msprop:Generator_UserTableName="расчет надбавки" msprop:Generator_RowChangedName="расчет_надбавкиRowChanged" msprop:Generator_RowEvArgName="расчет_надбавкиRowChangeEvent" msprop:Generator_RowClassName="расчет_надбавкиRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Личный_x0020_номер" msprop:Generator_ColumnVarNameInTable="columnЛичный_номер" msprop:Generator_ColumnPropNameInRow="Личный_номер" msprop:Generator_ColumnPropNameInTable="Личный_номерColumn" msprop:Generator_UserColumnName="Личный номер" type="xs:int" />
+              <xs:element name="Надбавка" msprop:Generator_ColumnVarNameInTable="columnНадбавка" msprop:Generator_ColumnPropNameInRow="Надбавка" msprop:Generator_ColumnPropNameInTable="НадбавкаColumn" msprop:Generator_UserColumnName="Надбавка" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="расчет_x0020_оклада" msprop:Generator_TableClassName="расчет_окладаDataTable" msprop:Generator_TableVarName="tableрасчет_оклада" msprop:Generator_TablePropName="расчет_оклада" msprop:Generator_RowDeletingName="расчет_окладаRowDeleting" msprop:Generator_RowChangingName="расчет_окладаRowChanging" msprop:Generator_RowEvHandlerName="расчет_окладаRowChangeEventHandler" msprop:Generator_RowDeletedName="расчет_окладаRowDeleted" msprop:Generator_UserTableName="расчет оклада" msprop:Generator_RowChangedName="расчет_окладаRowChanged" msprop:Generator_RowEvArgName="расчет_окладаRowChangeEvent" msprop:Generator_RowClassName="расчет_окладаRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Дней_x0020_в_x0020_месяце" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnДней_в_месяце" msprop:Generator_ColumnPropNameInRow="Дней_в_месяце" msprop:Generator_ColumnPropNameInTable="Дней_в_месяцеColumn" msprop:Generator_UserColumnName="Дней в месяце" type="xs:short" minOccurs="0" />
+              <xs:element name="Личный_x0020_номер" msprop:Generator_ColumnVarNameInTable="columnЛичный_номер" msprop:Generator_ColumnPropNameInRow="Личный_номер" msprop:Generator_ColumnPropNameInTable="Личный_номерColumn" msprop:Generator_UserColumnName="Личный номер" type="xs:int" minOccurs="0" />
+              <xs:element name="Дней_x0020_болезни" msprop:Generator_ColumnVarNameInTable="columnДней_болезни" msprop:Generator_ColumnPropNameInRow="Дней_болезни" msprop:Generator_ColumnPropNameInTable="Дней_болезниColumn" msprop:Generator_UserColumnName="Дней болезни" type="xs:double" minOccurs="0" />
+              <xs:element name="Кол-во_x0020_отработанных_x0020_дней" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="_columnКол_во_отработанных_дней" msprop:Generator_ColumnPropNameInRow="_Кол_во_отработанных_дней" msprop:Generator_ColumnPropNameInTable="_Кол_во_отработанных_днейColumn" msprop:Generator_UserColumnName="Кол-во отработанных дней" type="xs:double" minOccurs="0" />
+              <xs:element name="Оклад" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnОклад" msprop:Generator_ColumnPropNameInRow="Оклад" msprop:Generator_ColumnPropNameInTable="ОкладColumn" msprop:Generator_UserColumnName="Оклад" type="xs:double" minOccurs="0" />
+              <xs:element name="Исходный_x0020_оклад" msprop:Generator_ColumnVarNameInTable="columnИсходный_оклад" msprop:Generator_ColumnPropNameInRow="Исходный_оклад" msprop:Generator_ColumnPropNameInTable="Исходный_окладColumn" msprop:Generator_UserColumnName="Исходный оклад" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="расчет_x0020_премии" msprop:Generator_TableClassName="расчет_премииDataTable" msprop:Generator_TableVarName="tableрасчет_премии" msprop:Generator_TablePropName="расчет_премии" msprop:Generator_RowDeletingName="расчет_премииRowDeleting" msprop:Generator_RowChangingName="расчет_премииRowChanging" msprop:Generator_RowEvHandlerName="расчет_премииRowChangeEventHandler" msprop:Generator_RowDeletedName="расчет_премииRowDeleted" msprop:Generator_UserTableName="расчет премии" msprop:Generator_RowChangedName="расчет_премииRowChanged" msprop:Generator_RowEvArgName="расчет_премииRowChangeEvent" msprop:Generator_RowClassName="расчет_премииRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Личный_x0020_номер" msprop:Generator_ColumnVarNameInTable="columnЛичный_номер" msprop:Generator_ColumnPropNameInRow="Личный_номер" msprop:Generator_ColumnPropNameInTable="Личный_номерColumn" msprop:Generator_UserColumnName="Личный номер" type="xs:int" />
+              <xs:element name="Премия" msprop:Generator_ColumnVarNameInTable="columnПремия" msprop:Generator_ColumnPropNameInRow="Премия" msprop:Generator_ColumnPropNameInTable="ПремияColumn" msprop:Generator_UserColumnName="Премия" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Личные_x0020_данные" msprop:Generator_TableClassName="Личные_данныеDataTable" msprop:Generator_TableVarName="tableЛичные_данные" msprop:Generator_TablePropName="Личные_данные" msprop:Generator_RowDeletingName="Личные_данныеRowDeleting" msprop:Generator_RowChangingName="Личные_данныеRowChanging" msprop:Generator_RowEvHandlerName="Личные_данныеRowChangeEventHandler" msprop:Generator_RowDeletedName="Личные_данныеRowDeleted" msprop:Generator_UserTableName="Личные данные" msprop:Generator_RowChangedName="Личные_данныеRowChanged" msprop:Generator_RowEvArgName="Личные_данныеRowChangeEvent" msprop:Generator_RowClassName="Личные_данныеRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Личный_x0020_номер" msprop:Generator_ColumnVarNameInTable="columnЛичный_номер" msprop:Generator_ColumnPropNameInRow="Личный_номер" msprop:Generator_ColumnPropNameInTable="Личный_номерColumn" msprop:Generator_UserColumnName="Личный номер" type="xs:int" />
+              <xs:element name="ФИО" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_UserColumnName="ФИО" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Должность" msprop:Generator_ColumnVarNameInTable="columnДолжность" msprop:Generator_ColumnPropNameInRow="Должность" msprop:Generator_ColumnPropNameInTable="ДолжностьColumn" msprop:Generator_UserColumnName="Должность" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Семейное_x0020_положение" msprop:Generator_ColumnVarNameInTable="columnСемейное_положение" msprop:Generator_ColumnPropNameInRow="Семейное_положение" msprop:Generator_ColumnPropNameInTable="Семейное_положениеColumn" msprop:Generator_UserColumnName="Семейное положение" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Кол-во_x0020_детей" msprop:Generator_ColumnVarNameInTable="_columnКол_во_детей" msprop:Generator_ColumnPropNameInRow="_Кол_во_детей" msprop:Generator_ColumnPropNameInTable="_Кол_во_детейColumn" msprop:Generator_UserColumnName="Кол-во детей" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Оклад" msprop:Generator_TableClassName="ОкладDataTable" msprop:Generator_TableVarName="tableОклад" msprop:Generator_TablePropName="Оклад" msprop:Generator_RowDeletingName="ОкладRowDeleting" msprop:Generator_RowChangingName="ОкладRowChanging" msprop:Generator_RowEvHandlerName="ОкладRowChangeEventHandler" msprop:Generator_RowDeletedName="ОкладRowDeleted" msprop:Generator_UserTableName="Оклад" msprop:Generator_RowChangedName="ОкладRowChanged" msprop:Generator_RowEvArgName="ОкладRowChangeEvent" msprop:Generator_RowClassName="ОкладRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Личный_x0020_номер" msprop:Generator_ColumnVarNameInTable="columnЛичный_номер" msprop:Generator_ColumnPropNameInRow="Личный_номер" msprop:Generator_ColumnPropNameInTable="Личный_номерColumn" msprop:Generator_UserColumnName="Личный номер" type="xs:int" />
+              <xs:element name="Оклад" msprop:Generator_ColumnVarNameInTable="columnОклад" msprop:Generator_ColumnPropNameInRow="Оклад" msprop:Generator_ColumnPropNameInTable="ОкладColumn" msprop:Generator_UserColumnName="Оклад" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Премия" msprop:Generator_TableClassName="ПремияDataTable" msprop:Generator_TableVarName="tableПремия" msprop:Generator_TablePropName="Премия" msprop:Generator_RowDeletingName="ПремияRowDeleting" msprop:Generator_RowChangingName="ПремияRowChanging" msprop:Generator_RowEvHandlerName="ПремияRowChangeEventHandler" msprop:Generator_RowDeletedName="ПремияRowDeleted" msprop:Generator_UserTableName="Премия" msprop:Generator_RowChangedName="ПремияRowChanged" msprop:Generator_RowEvArgName="ПремияRowChangeEvent" msprop:Generator_RowClassName="ПремияRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_x0020_записи" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_записи" msprop:Generator_ColumnPropNameInRow="id_записи" msprop:Generator_ColumnPropNameInTable="id_записиColumn" msprop:Generator_UserColumnName="id записи" type="xs:int" />
+              <xs:element name="Личный_x0020_номер" msprop:Generator_ColumnVarNameInTable="columnЛичный_номер" msprop:Generator_ColumnPropNameInRow="Личный_номер" msprop:Generator_ColumnPropNameInTable="Личный_номерColumn" msprop:Generator_UserColumnName="Личный номер" type="xs:int" minOccurs="0" />
+              <xs:element name="Размер_x0020_премии" msprop:Generator_ColumnVarNameInTable="columnРазмер_премии" msprop:Generator_ColumnPropNameInRow="Размер_премии" msprop:Generator_ColumnPropNameInTable="Размер_премииColumn" msprop:Generator_UserColumnName="Размер премии" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Дата" msprop:Generator_ColumnVarNameInTable="columnДата" msprop:Generator_ColumnPropNameInRow="Дата" msprop:Generator_ColumnPropNameInTable="ДатаColumn" msprop:Generator_UserColumnName="Дата" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Описание" msprop:Generator_ColumnVarNameInTable="columnОписание" msprop:Generator_ColumnPropNameInRow="Описание" msprop:Generator_ColumnPropNameInTable="ОписаниеColumn" msprop:Generator_UserColumnName="Описание" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:расчет_x0020_надбавки" />
+      <xs:field xpath="mstns:Личный_x0020_номер" />
+    </xs:unique>
+    <xs:unique name="расчет_x0020_премии_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:расчет_x0020_премии" />
+      <xs:field xpath="mstns:Личный_x0020_номер" />
+    </xs:unique>
+    <xs:unique name="Личные_x0020_данные_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Личные_x0020_данные" />
+      <xs:field xpath="mstns:Личный_x0020_номер" />
+    </xs:unique>
+    <xs:unique name="Оклад_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Оклад" />
+      <xs:field xpath="mstns:Личный_x0020_номер" />
+    </xs:unique>
+    <xs:unique name="Премия_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Премия" />
+      <xs:field xpath="mstns:id_x0020_записи" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Личные_x0020_данныеОклад" msdata:parent="Личные_x0020_данные" msdata:child="Оклад" msdata:parentkey="Личный_x0020_номер" msdata:childkey="Личный_x0020_номер" msprop:Generator_UserChildTable="Оклад" msprop:Generator_ChildPropName="GetОкладRows" msprop:Generator_UserRelationName="Личные данныеОклад" msprop:Generator_ParentPropName="Личные_данныеRow" msprop:Generator_RelationVarName="relationЛичные_данныеОклад" msprop:Generator_UserParentTable="Личные данные" />
+      <msdata:Relationship name="Личные_x0020_данныеПремия" msdata:parent="Личные_x0020_данные" msdata:child="Премия" msdata:parentkey="Личный_x0020_номер" msdata:childkey="Личный_x0020_номер" msprop:Generator_UserChildTable="Премия" msprop:Generator_ChildPropName="GetПремияRows" msprop:Generator_UserRelationName="Личные данныеПремия" msprop:Generator_ParentPropName="Личные_данныеRow" msprop:Generator_RelationVarName="relationЛичные_данныеПремия" msprop:Generator_UserParentTable="Личные данные" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

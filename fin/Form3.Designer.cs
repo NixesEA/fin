@@ -35,6 +35,8 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.надбавкаBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appData = new fin.appData();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtSpec = new System.Windows.Forms.Label();
@@ -43,18 +45,16 @@
             this.txtNomber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.appData = new fin.appData();
-            this.надбавкаBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.надбавкаTableAdapter = new fin.appDataTableAdapters.НадбавкаTableAdapter();
             this.idЗаписиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.личныйНомерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.надбавкаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаНачалаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаОкончанияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.надбавкаTableAdapter = new fin.appDataTableAdapters.НадбавкаTableAdapter();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.надбавкаBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -120,6 +120,16 @@
             this.textBox1.Size = new System.Drawing.Size(196, 20);
             this.textBox1.TabIndex = 7;
             // 
+            // надбавкаBindingSource
+            // 
+            this.надбавкаBindingSource.DataMember = "Надбавка";
+            this.надбавкаBindingSource.DataSource = this.appData;
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "appData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -182,6 +192,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -194,52 +206,48 @@
             this.dataGridView1.DataSource = this.надбавкаBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 209);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(776, 218);
             this.dataGridView1.TabIndex = 26;
-            // 
-            // appData
-            // 
-            this.appData.DataSetName = "appData";
-            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // надбавкаBindingSource
-            // 
-            this.надбавкаBindingSource.DataMember = "Надбавка";
-            this.надбавкаBindingSource.DataSource = this.appData;
-            // 
-            // надбавкаTableAdapter
-            // 
-            this.надбавкаTableAdapter.ClearBeforeFill = true;
             // 
             // idЗаписиDataGridViewTextBoxColumn
             // 
             this.idЗаписиDataGridViewTextBoxColumn.DataPropertyName = "id записи";
             this.idЗаписиDataGridViewTextBoxColumn.HeaderText = "id записи";
             this.idЗаписиDataGridViewTextBoxColumn.Name = "idЗаписиDataGridViewTextBoxColumn";
+            this.idЗаписиDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // личныйНомерDataGridViewTextBoxColumn
             // 
             this.личныйНомерDataGridViewTextBoxColumn.DataPropertyName = "Личный номер";
             this.личныйНомерDataGridViewTextBoxColumn.HeaderText = "Личный номер";
             this.личныйНомерDataGridViewTextBoxColumn.Name = "личныйНомерDataGridViewTextBoxColumn";
+            this.личныйНомерDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // надбавкаDataGridViewTextBoxColumn
             // 
             this.надбавкаDataGridViewTextBoxColumn.DataPropertyName = "Надбавка";
             this.надбавкаDataGridViewTextBoxColumn.HeaderText = "Надбавка";
             this.надбавкаDataGridViewTextBoxColumn.Name = "надбавкаDataGridViewTextBoxColumn";
+            this.надбавкаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // датаНачалаDataGridViewTextBoxColumn
             // 
             this.датаНачалаDataGridViewTextBoxColumn.DataPropertyName = "Дата начала";
             this.датаНачалаDataGridViewTextBoxColumn.HeaderText = "Дата начала";
             this.датаНачалаDataGridViewTextBoxColumn.Name = "датаНачалаDataGridViewTextBoxColumn";
+            this.датаНачалаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // датаОкончанияDataGridViewTextBoxColumn
             // 
             this.датаОкончанияDataGridViewTextBoxColumn.DataPropertyName = "Дата окончания";
             this.датаОкончанияDataGridViewTextBoxColumn.HeaderText = "Дата окончания";
             this.датаОкончанияDataGridViewTextBoxColumn.Name = "датаОкончанияDataGridViewTextBoxColumn";
+            this.датаОкончанияDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // надбавкаTableAdapter
+            // 
+            this.надбавкаTableAdapter.ClearBeforeFill = true;
             // 
             // Form3
             // 
@@ -257,9 +265,9 @@
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.надбавкаBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

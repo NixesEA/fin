@@ -35,23 +35,23 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.больничныйЛистBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appData = new fin.appData();
             this.txtSpec = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNomber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.appData = new fin.appData();
-            this.больничныйЛистBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.больничный_листTableAdapter = new fin.appDataTableAdapters.Больничный_листTableAdapter();
             this.idЗаписиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.личныйНомерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаЗаболеванияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаВыздоравленияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.больничный_листTableAdapter = new fin.appDataTableAdapters.Больничный_листTableAdapter();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.больничныйЛистBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -115,6 +115,16 @@
             this.textBox3.Size = new System.Drawing.Size(196, 20);
             this.textBox3.TabIndex = 5;
             // 
+            // больничныйЛистBindingSource
+            // 
+            this.больничныйЛистBindingSource.DataMember = "Больничный лист";
+            this.больничныйЛистBindingSource.DataSource = this.appData;
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "appData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtSpec
             // 
             this.txtSpec.AutoSize = true;
@@ -160,6 +170,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -171,46 +183,41 @@
             this.dataGridView1.DataSource = this.больничныйЛистBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 209);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(776, 218);
             this.dataGridView1.TabIndex = 20;
-            // 
-            // appData
-            // 
-            this.appData.DataSetName = "appData";
-            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // больничныйЛистBindingSource
-            // 
-            this.больничныйЛистBindingSource.DataMember = "Больничный лист";
-            this.больничныйЛистBindingSource.DataSource = this.appData;
-            // 
-            // больничный_листTableAdapter
-            // 
-            this.больничный_листTableAdapter.ClearBeforeFill = true;
             // 
             // idЗаписиDataGridViewTextBoxColumn
             // 
             this.idЗаписиDataGridViewTextBoxColumn.DataPropertyName = "id записи";
             this.idЗаписиDataGridViewTextBoxColumn.HeaderText = "id записи";
             this.idЗаписиDataGridViewTextBoxColumn.Name = "idЗаписиDataGridViewTextBoxColumn";
+            this.idЗаписиDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // личныйНомерDataGridViewTextBoxColumn
             // 
             this.личныйНомерDataGridViewTextBoxColumn.DataPropertyName = "Личный номер";
             this.личныйНомерDataGridViewTextBoxColumn.HeaderText = "Личный номер";
             this.личныйНомерDataGridViewTextBoxColumn.Name = "личныйНомерDataGridViewTextBoxColumn";
+            this.личныйНомерDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // датаЗаболеванияDataGridViewTextBoxColumn
             // 
             this.датаЗаболеванияDataGridViewTextBoxColumn.DataPropertyName = "Дата заболевания";
             this.датаЗаболеванияDataGridViewTextBoxColumn.HeaderText = "Дата заболевания";
             this.датаЗаболеванияDataGridViewTextBoxColumn.Name = "датаЗаболеванияDataGridViewTextBoxColumn";
+            this.датаЗаболеванияDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // датаВыздоравленияDataGridViewTextBoxColumn
             // 
             this.датаВыздоравленияDataGridViewTextBoxColumn.DataPropertyName = "Дата выздоравления";
             this.датаВыздоравленияDataGridViewTextBoxColumn.HeaderText = "Дата выздоравления";
             this.датаВыздоравленияDataGridViewTextBoxColumn.Name = "датаВыздоравленияDataGridViewTextBoxColumn";
+            this.датаВыздоравленияDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // больничный_листTableAdapter
+            // 
+            this.больничный_листTableAdapter.ClearBeforeFill = true;
             // 
             // Form2
             // 
@@ -228,9 +235,9 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.больничныйЛистBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -34,6 +34,10 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.премияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appData = new fin.appData();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtSpec = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -41,20 +45,16 @@
             this.txtNomber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.appData = new fin.appData();
-            this.премияBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.премияTableAdapter = new fin.appDataTableAdapters.ПремияTableAdapter();
             this.idЗаписиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.личныйНомерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.размерПремииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.описаниеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.премияTableAdapter = new fin.appDataTableAdapters.ПремияTableAdapter();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.премияBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -112,6 +112,34 @@
             this.panel.Size = new System.Drawing.Size(344, 142);
             this.panel.TabIndex = 33;
             // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.премияBindingSource, "Описание", true));
+            this.textBox1.Location = new System.Drawing.Point(133, 84);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 55);
+            this.textBox1.TabIndex = 7;
+            // 
+            // премияBindingSource
+            // 
+            this.премияBindingSource.DataMember = "Премия";
+            this.премияBindingSource.DataSource = this.appData;
+            // 
+            // appData
+            // 
+            this.appData.DataSetName = "appData";
+            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Описание";
+            // 
             // textBox3
             // 
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.премияBindingSource, "Дата", true));
@@ -165,6 +193,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -177,70 +207,48 @@
             this.dataGridView1.DataSource = this.премияBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 209);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(776, 218);
             this.dataGridView1.TabIndex = 32;
-            // 
-            // appData
-            // 
-            this.appData.DataSetName = "appData";
-            this.appData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // премияBindingSource
-            // 
-            this.премияBindingSource.DataMember = "Премия";
-            this.премияBindingSource.DataSource = this.appData;
-            // 
-            // премияTableAdapter
-            // 
-            this.премияTableAdapter.ClearBeforeFill = true;
             // 
             // idЗаписиDataGridViewTextBoxColumn
             // 
             this.idЗаписиDataGridViewTextBoxColumn.DataPropertyName = "id записи";
             this.idЗаписиDataGridViewTextBoxColumn.HeaderText = "id записи";
             this.idЗаписиDataGridViewTextBoxColumn.Name = "idЗаписиDataGridViewTextBoxColumn";
+            this.idЗаписиDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // личныйНомерDataGridViewTextBoxColumn
             // 
             this.личныйНомерDataGridViewTextBoxColumn.DataPropertyName = "Личный номер";
             this.личныйНомерDataGridViewTextBoxColumn.HeaderText = "Личный номер";
             this.личныйНомерDataGridViewTextBoxColumn.Name = "личныйНомерDataGridViewTextBoxColumn";
+            this.личныйНомерDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // размерПремииDataGridViewTextBoxColumn
             // 
             this.размерПремииDataGridViewTextBoxColumn.DataPropertyName = "Размер премии";
             this.размерПремииDataGridViewTextBoxColumn.HeaderText = "Размер премии";
             this.размерПремииDataGridViewTextBoxColumn.Name = "размерПремииDataGridViewTextBoxColumn";
+            this.размерПремииDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // датаDataGridViewTextBoxColumn
             // 
             this.датаDataGridViewTextBoxColumn.DataPropertyName = "Дата";
             this.датаDataGridViewTextBoxColumn.HeaderText = "Дата";
             this.датаDataGridViewTextBoxColumn.Name = "датаDataGridViewTextBoxColumn";
+            this.датаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // описаниеDataGridViewTextBoxColumn
             // 
             this.описаниеDataGridViewTextBoxColumn.DataPropertyName = "Описание";
             this.описаниеDataGridViewTextBoxColumn.HeaderText = "Описание";
             this.описаниеDataGridViewTextBoxColumn.Name = "описаниеDataGridViewTextBoxColumn";
+            this.описаниеDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // textBox1
+            // премияTableAdapter
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.премияBindingSource, "Описание", true));
-            this.textBox1.Location = new System.Drawing.Point(133, 84);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 55);
-            this.textBox1.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Описание";
+            this.премияTableAdapter.ClearBeforeFill = true;
             // 
             // Form4
             // 
@@ -258,9 +266,9 @@
             this.Load += new System.EventHandler(this.Form4_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.премияBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

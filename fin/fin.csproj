@@ -55,6 +55,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>appDataa.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +137,17 @@
     </None>
     <None Include="appDataa.xss">
       <DependentUpon>appDataa.xsd</DependentUpon>
+    </None>
+    <None Include="Data.xsc">
+      <DependentUpon>Data.xsd</DependentUpon>
+    </None>
+    <None Include="Data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data.xss">
+      <DependentUpon>Data.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
