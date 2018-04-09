@@ -19,6 +19,7 @@ namespace fin
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            panel.Enabled = false;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Больничный_лист". При необходимости она может быть перемещена или удалена.
             this.больничный_листTableAdapter.Fill(this.data.Больничный_лист);
         }

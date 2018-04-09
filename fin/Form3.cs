@@ -19,6 +19,7 @@ namespace fin
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            panel.Enabled = false;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Надбавка". При необходимости она может быть перемещена или удалена.
             this.надбавкаTableAdapter.Fill(this.data.Надбавка);
         }

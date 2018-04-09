@@ -12,13 +12,14 @@ namespace fin
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
+        public Form1() {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            panel.Enabled = false;
+
             // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Оклад". При необходимости она может быть перемещена или удалена.
             this.окладTableAdapter.Fill(this.data.Оклад);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Премия". При необходимости она может быть перемещена или удалена.
@@ -30,11 +31,6 @@ namespace fin
             // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Личные_данные". При необходимости она может быть перемещена или удалена.
             this.личные_данныеTableAdapter.Fill(this.data.Личные_данные);
            
-        }
-
-        private void txt(object sender, KeyPressEventArgs e)
-        {
-
         }
 
         //поиск
@@ -74,12 +70,13 @@ namespace fin
         {
             try
             {
-                label1.Enabled = true;
-                txtNomber.Enabled = true;
                 panel.Enabled = true;
                 txtName.Focus();
                 this.data.Личные_данные.AddЛичные_данныеRow(this.data.Личные_данные.NewЛичные_данныеRow());
                 личныеДанныеBindingSource.MoveLast();
+
+                this.data.Оклад.AddОкладRow(this.data.Оклад.NewОкладRow());//
+                окладBindingSource.MoveLast();//   
             }
             catch (Exception ex)
             {
@@ -106,6 +103,8 @@ namespace fin
             {
                 личныеДанныеBindingSource.EndEdit();
                 личные_данныеTableAdapter.Update(this.data.Личные_данные);
+                окладBindingSource.EndEdit();
+                окладTableAdapter.Update(this.data.Оклад);
                 panel.Enabled = false;
             }
             catch (Exception ex)
@@ -156,5 +155,12 @@ namespace fin
             // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Личные_данные". При необходимости она может быть перемещена или удалена.
             this.личные_данныеTableAdapter.Fill(this.data.Личные_данные);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form6 newForm = new Form6();
+            newForm.Show();
+        }
+
     }
 }

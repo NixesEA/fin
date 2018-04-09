@@ -19,6 +19,7 @@ namespace fin
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            panel.Enabled = false;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Премия". При необходимости она может быть перемещена или удалена.
             this.премияTableAdapter.Fill(this.data.Премия);
         }

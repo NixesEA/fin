@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.расчетЗПBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.data = new fin.Data();
             this.расчетЗПBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.личныеДанныеЗапросBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.data = new fin.Data();
-            this.расчетЗПBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.расчет_З_ПTableAdapter = new fin.DataTableAdapters.расчет_З_ПTableAdapter();
             this.личныйНомерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.окладDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,11 +41,12 @@
             this.надбавкиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.вычетЗаБолезниDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.зПDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.расчетЗПBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.расчетЗПBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.личныеДанныеЗапросBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.расчетЗПBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -61,23 +62,25 @@
             this.премияDataGridViewTextBoxColumn,
             this.надбавкиDataGridViewTextBoxColumn,
             this.вычетЗаБолезниDataGridViewTextBoxColumn,
-            this.зПDataGridViewTextBoxColumn});
+            this.зПDataGridViewTextBoxColumn,
+            this.фИОDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.расчетЗПBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // data
-            // 
-            this.data.DataSetName = "Data";
-            this.data.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // расчетЗПBindingSource
             // 
             this.расчетЗПBindingSource.DataMember = "расчет З/П";
             this.расчетЗПBindingSource.DataSource = this.data;
+            // 
+            // data
+            // 
+            this.data.DataSetName = "Data";
+            this.data.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // расчет_З_ПTableAdapter
             // 
@@ -125,6 +128,13 @@
             this.зПDataGridViewTextBoxColumn.Name = "зПDataGridViewTextBoxColumn";
             this.зПDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // фИОDataGridViewTextBoxColumn
+            // 
+            this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
+            this.фИОDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,10 +145,10 @@
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.расчетЗПBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.расчетЗПBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.личныеДанныеЗапросBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.расчетЗПBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,5 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn надбавкиDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn вычетЗаБолезниDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn зПDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
     }
 }

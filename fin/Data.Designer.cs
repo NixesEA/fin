@@ -24,8 +24,6 @@ namespace fin {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class Data : global::System.Data.DataSet {
         
-        private _расчет_З_ПDataTable _tableрасчет_З_П;
-        
         private расчет_надбавкиDataTable tableрасчет_надбавки;
         
         private расчет_окладаDataTable tableрасчет_оклада;
@@ -41,6 +39,8 @@ namespace fin {
         private Больничный_листDataTable tableБольничный_лист;
         
         private НадбавкаDataTable tableНадбавка;
+        
+        private _расчет_З_ПDataTable _tableрасчет_З_П;
         
         private global::System.Data.DataRelation relationЛичные_данныеОклад;
         
@@ -78,9 +78,6 @@ namespace fin {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["расчет З/П"] != null)) {
-                    base.Tables.Add(new _расчет_З_ПDataTable(ds.Tables["расчет З/П"]));
-                }
                 if ((ds.Tables["расчет надбавки"] != null)) {
                     base.Tables.Add(new расчет_надбавкиDataTable(ds.Tables["расчет надбавки"]));
                 }
@@ -105,6 +102,9 @@ namespace fin {
                 if ((ds.Tables["Надбавка"] != null)) {
                     base.Tables.Add(new НадбавкаDataTable(ds.Tables["Надбавка"]));
                 }
+                if ((ds.Tables["расчет З/П"] != null)) {
+                    base.Tables.Add(new _расчет_З_ПDataTable(ds.Tables["расчет З/П"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -121,16 +121,6 @@ namespace fin {
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public _расчет_З_ПDataTable _расчет_З_П {
-            get {
-                return this._tableрасчет_З_П;
-            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -215,6 +205,16 @@ namespace fin {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _расчет_З_ПDataTable _расчет_З_П {
+            get {
+                return this._tableрасчет_З_П;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -280,9 +280,6 @@ namespace fin {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["расчет З/П"] != null)) {
-                    base.Tables.Add(new _расчет_З_ПDataTable(ds.Tables["расчет З/П"]));
-                }
                 if ((ds.Tables["расчет надбавки"] != null)) {
                     base.Tables.Add(new расчет_надбавкиDataTable(ds.Tables["расчет надбавки"]));
                 }
@@ -306,6 +303,9 @@ namespace fin {
                 }
                 if ((ds.Tables["Надбавка"] != null)) {
                     base.Tables.Add(new НадбавкаDataTable(ds.Tables["Надбавка"]));
+                }
+                if ((ds.Tables["расчет З/П"] != null)) {
+                    base.Tables.Add(new _расчет_З_ПDataTable(ds.Tables["расчет З/П"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -340,12 +340,6 @@ namespace fin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this._tableрасчет_З_П = ((_расчет_З_ПDataTable)(base.Tables["расчет З/П"]));
-            if ((initTable == true)) {
-                if ((this._tableрасчет_З_П != null)) {
-                    this._tableрасчет_З_П.InitVars();
-                }
-            }
             this.tableрасчет_надбавки = ((расчет_надбавкиDataTable)(base.Tables["расчет надбавки"]));
             if ((initTable == true)) {
                 if ((this.tableрасчет_надбавки != null)) {
@@ -394,6 +388,12 @@ namespace fin {
                     this.tableНадбавка.InitVars();
                 }
             }
+            this._tableрасчет_З_П = ((_расчет_З_ПDataTable)(base.Tables["расчет З/П"]));
+            if ((initTable == true)) {
+                if ((this._tableрасчет_З_П != null)) {
+                    this._tableрасчет_З_П.InitVars();
+                }
+            }
             this.relationЛичные_данныеОклад = this.Relations["Личные данныеОклад"];
             this.relationЛичные_данныеПремия = this.Relations["Личные данныеПремия"];
             this.relationЛичные_данныеБольничный_лист = this.Relations["Личные данныеБольничный лист"];
@@ -408,8 +408,6 @@ namespace fin {
             this.Namespace = "http://tempuri.org/Data.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this._tableрасчет_З_П = new _расчет_З_ПDataTable();
-            base.Tables.Add(this._tableрасчет_З_П);
             this.tableрасчет_надбавки = new расчет_надбавкиDataTable();
             base.Tables.Add(this.tableрасчет_надбавки);
             this.tableрасчет_оклада = new расчет_окладаDataTable();
@@ -426,6 +424,8 @@ namespace fin {
             base.Tables.Add(this.tableБольничный_лист);
             this.tableНадбавка = new НадбавкаDataTable();
             base.Tables.Add(this.tableНадбавка);
+            this._tableрасчет_З_П = new _расчет_З_ПDataTable();
+            base.Tables.Add(this._tableрасчет_З_П);
             this.relationЛичные_данныеОклад = new global::System.Data.DataRelation("Личные данныеОклад", new global::System.Data.DataColumn[] {
                         this.tableЛичные_данные.Личный_номерColumn}, new global::System.Data.DataColumn[] {
                         this.tableОклад.Личный_номерColumn}, false);
@@ -442,12 +442,6 @@ namespace fin {
                         this.tableЛичные_данные.Личный_номерColumn}, new global::System.Data.DataColumn[] {
                         this.tableНадбавка.Личный_номерColumn}, false);
             this.Relations.Add(this.relationЛичные_данныеНадбавка);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerialize_расчет_З_П() {
-            return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -495,6 +489,12 @@ namespace fin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeНадбавка() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerialize_расчет_З_П() {
             return false;
         }
         
@@ -554,9 +554,6 @@ namespace fin {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void _расчет_З_ПRowChangeEventHandler(object sender, _расчет_З_ПRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void расчет_надбавкиRowChangeEventHandler(object sender, расчет_надбавкиRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -580,327 +577,8 @@ namespace fin {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void НадбавкаRowChangeEventHandler(object sender, НадбавкаRowChangeEvent e);
         
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class _расчет_З_ПDataTable : global::System.Data.TypedTableBase<_расчет_З_ПRow> {
-            
-            private global::System.Data.DataColumn columnЛичный_номер;
-            
-            private global::System.Data.DataColumn columnОклад;
-            
-            private global::System.Data.DataColumn columnПремия;
-            
-            private global::System.Data.DataColumn columnНадбавки;
-            
-            private global::System.Data.DataColumn columnВычет_за_болезни;
-            
-            private global::System.Data.DataColumn _columnЗ_П;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public _расчет_З_ПDataTable() {
-                this.TableName = "расчет З/П";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal _расчет_З_ПDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected _расчет_З_ПDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Личный_номерColumn {
-                get {
-                    return this.columnЛичный_номер;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ОкладColumn {
-                get {
-                    return this.columnОклад;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ПремияColumn {
-                get {
-                    return this.columnПремия;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn НадбавкиColumn {
-                get {
-                    return this.columnНадбавки;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Вычет_за_болезниColumn {
-                get {
-                    return this.columnВычет_за_болезни;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn _З_ПColumn {
-                get {
-                    return this._columnЗ_П;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public _расчет_З_ПRow this[int index] {
-                get {
-                    return ((_расчет_З_ПRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event _расчет_З_ПRowChangeEventHandler _расчет_З_ПRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event _расчет_З_ПRowChangeEventHandler _расчет_З_ПRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event _расчет_З_ПRowChangeEventHandler _расчет_З_ПRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event _расчет_З_ПRowChangeEventHandler _расчет_З_ПRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Add_расчет_З_ПRow(_расчет_З_ПRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public _расчет_З_ПRow Add_расчет_З_ПRow(int Личный_номер, decimal Оклад, decimal Премия, decimal Надбавки, decimal Вычет_за_болезни, decimal _З_П) {
-                _расчет_З_ПRow row_расчет_З_ПRow = ((_расчет_З_ПRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Личный_номер,
-                        Оклад,
-                        Премия,
-                        Надбавки,
-                        Вычет_за_болезни,
-                        _З_П};
-                row_расчет_З_ПRow.ItemArray = columnValuesArray;
-                this.Rows.Add(row_расчет_З_ПRow);
-                return row_расчет_З_ПRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                _расчет_З_ПDataTable cln = ((_расчет_З_ПDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new _расчет_З_ПDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnЛичный_номер = base.Columns["Личный номер"];
-                this.columnОклад = base.Columns["Оклад"];
-                this.columnПремия = base.Columns["Премия"];
-                this.columnНадбавки = base.Columns["Надбавки"];
-                this.columnВычет_за_болезни = base.Columns["Вычет за болезни"];
-                this._columnЗ_П = base.Columns["З/П"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnЛичный_номер = new global::System.Data.DataColumn("Личный номер", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnЛичный_номер);
-                this.columnОклад = new global::System.Data.DataColumn("Оклад", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnОклад);
-                this.columnПремия = new global::System.Data.DataColumn("Премия", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnПремия);
-                this.columnНадбавки = new global::System.Data.DataColumn("Надбавки", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНадбавки);
-                this.columnВычет_за_болезни = new global::System.Data.DataColumn("Вычет за болезни", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnВычет_за_болезни);
-                this._columnЗ_П = new global::System.Data.DataColumn("З/П", typeof(decimal), null, global::System.Data.MappingType.Element);
-                this._columnЗ_П.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnЗ_П");
-                this._columnЗ_П.ExtendedProperties.Add("Generator_UserColumnName", "З/П");
-                base.Columns.Add(this._columnЗ_П);
-                this.columnВычет_за_болезни.ReadOnly = true;
-                this.ExtendedProperties.Add("Generator_TableVarName", "_tableрасчет_З_П");
-                this.ExtendedProperties.Add("Generator_UserTableName", "расчет З/П");
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public _расчет_З_ПRow New_расчет_З_ПRow() {
-                return ((_расчет_З_ПRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new _расчет_З_ПRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(_расчет_З_ПRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this._расчет_З_ПRowChanged != null)) {
-                    this._расчет_З_ПRowChanged(this, new _расчет_З_ПRowChangeEvent(((_расчет_З_ПRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this._расчет_З_ПRowChanging != null)) {
-                    this._расчет_З_ПRowChanging(this, new _расчет_З_ПRowChangeEvent(((_расчет_З_ПRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this._расчет_З_ПRowDeleted != null)) {
-                    this._расчет_З_ПRowDeleted(this, new _расчет_З_ПRowChangeEvent(((_расчет_З_ПRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this._расчет_З_ПRowDeleting != null)) {
-                    this._расчет_З_ПRowDeleting(this, new _расчет_З_ПRowChangeEvent(((_расчет_З_ПRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Remove_расчет_З_ПRow(_расчет_З_ПRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Data ds = new Data();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "_расчет_З_ПDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void _расчет_З_ПRowChangeEventHandler(object sender, _расчет_З_ПRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1642,6 +1320,7 @@ namespace fin {
                                 this.columnЛичный_номер}, true));
                 this.columnЛичный_номер.AllowDBNull = false;
                 this.columnЛичный_номер.Unique = true;
+                this.columnПремия.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1895,10 +1574,10 @@ namespace fin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Личные_данныеRow AddЛичные_данныеRow(int Личный_номер, string ФИО, string Должность, string Семейное_положение, int _Кол_во_детей) {
+            public Личные_данныеRow AddЛичные_данныеRow(string ФИО, string Должность, string Семейное_положение, int _Кол_во_детей) {
                 Личные_данныеRow rowЛичные_данныеRow = ((Личные_данныеRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Личный_номер,
+                        null,
                         ФИО,
                         Должность,
                         Семейное_положение,
@@ -1956,6 +1635,8 @@ namespace fin {
                 base.Columns.Add(this._columnКол_во_детей);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnЛичный_номер}, true));
+                this.columnЛичный_номер.AutoIncrement = true;
+                this.columnЛичный_номер.AutoIncrementSeed = 1;
                 this.columnЛичный_номер.AllowDBNull = false;
                 this.columnЛичный_номер.Unique = true;
                 this.columnФИО.MaxLength = 255;
@@ -2184,14 +1865,11 @@ namespace fin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ОкладRow AddОкладRow(Личные_данныеRow parentЛичные_данныеRowByЛичные_данныеОклад, decimal Оклад) {
+            public ОкладRow AddОкладRow(decimal Оклад) {
                 ОкладRow rowОкладRow = ((ОкладRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Оклад};
-                if ((parentЛичные_данныеRowByЛичные_данныеОклад != null)) {
-                    columnValuesArray[0] = parentЛичные_данныеRowByЛичные_данныеОклад[0];
-                }
                 rowОкладRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowОкладRow);
                 return rowОкладRow;
@@ -2234,6 +1912,7 @@ namespace fin {
                 base.Columns.Add(this.columnОклад);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnЛичный_номер}, true));
+                this.columnЛичный_номер.AutoIncrement = true;
                 this.columnЛичный_номер.AllowDBNull = false;
                 this.columnЛичный_номер.Unique = true;
             }
@@ -3307,185 +2986,353 @@ namespace fin {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents the strongly named DataTable class.
         ///</summary>
-        public partial class _расчет_З_ПRow : global::System.Data.DataRow {
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _расчет_З_ПDataTable : global::System.Data.TypedTableBase<_расчет_З_ПRow> {
             
-            private _расчет_З_ПDataTable _tableрасчет_З_П;
+            private global::System.Data.DataColumn columnЛичный_номер;
+            
+            private global::System.Data.DataColumn columnФИО;
+            
+            private global::System.Data.DataColumn columnОклад;
+            
+            private global::System.Data.DataColumn columnПремия;
+            
+            private global::System.Data.DataColumn columnНадбавки;
+            
+            private global::System.Data.DataColumn columnВычет_за_болезни;
+            
+            private global::System.Data.DataColumn _columnЗ_П;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal _расчет_З_ПRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this._tableрасчет_З_П = ((_расчет_З_ПDataTable)(this.Table));
+            public _расчет_З_ПDataTable() {
+                this.TableName = "расчет З/П";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Личный_номер {
+            internal _расчет_З_ПDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected _расчет_З_ПDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Личный_номерColumn {
                 get {
-                    try {
-                        return ((int)(this[this._tableрасчет_З_П.Личный_номерColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Личный номер\' в таблице \'расчет З/П\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this._tableрасчет_З_П.Личный_номерColumn] = value;
+                    return this.columnЛичный_номер;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Оклад {
+            public global::System.Data.DataColumn ФИОColumn {
                 get {
-                    try {
-                        return ((decimal)(this[this._tableрасчет_З_П.ОкладColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Оклад\' в таблице \'расчет З/П\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this._tableрасчет_З_П.ОкладColumn] = value;
+                    return this.columnФИО;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Премия {
+            public global::System.Data.DataColumn ОкладColumn {
                 get {
-                    try {
-                        return ((decimal)(this[this._tableрасчет_З_П.ПремияColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Премия\' в таблице \'расчет З/П\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this._tableрасчет_З_П.ПремияColumn] = value;
+                    return this.columnОклад;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Надбавки {
+            public global::System.Data.DataColumn ПремияColumn {
                 get {
-                    try {
-                        return ((decimal)(this[this._tableрасчет_З_П.НадбавкиColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Надбавки\' в таблице \'расчет З/П\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this._tableрасчет_З_П.НадбавкиColumn] = value;
+                    return this.columnПремия;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Вычет_за_болезни {
+            public global::System.Data.DataColumn НадбавкиColumn {
                 get {
-                    try {
-                        return ((decimal)(this[this._tableрасчет_З_П.Вычет_за_болезниColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Вычет за болезни\' в таблице \'расчет З/П\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this._tableрасчет_З_П.Вычет_за_болезниColumn] = value;
+                    return this.columnНадбавки;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal _З_П {
+            public global::System.Data.DataColumn Вычет_за_болезниColumn {
                 get {
+                    return this.columnВычет_за_болезни;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn _З_ПColumn {
+                get {
+                    return this._columnЗ_П;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public _расчет_З_ПRow this[int index] {
+                get {
+                    return ((_расчет_З_ПRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event _расчет_З_ПRowChangeEventHandler _расчет_З_ПRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event _расчет_З_ПRowChangeEventHandler _расчет_З_ПRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event _расчет_З_ПRowChangeEventHandler _расчет_З_ПRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event _расчет_З_ПRowChangeEventHandler _расчет_З_ПRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Add_расчет_З_ПRow(_расчет_З_ПRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public _расчет_З_ПRow Add_расчет_З_ПRow(int Личный_номер, string ФИО, decimal Оклад, decimal Премия, decimal Надбавки, decimal Вычет_за_болезни, decimal _З_П) {
+                _расчет_З_ПRow row_расчет_З_ПRow = ((_расчет_З_ПRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Личный_номер,
+                        ФИО,
+                        Оклад,
+                        Премия,
+                        Надбавки,
+                        Вычет_за_болезни,
+                        _З_П};
+                row_расчет_З_ПRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_расчет_З_ПRow);
+                return row_расчет_З_ПRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public _расчет_З_ПRow FindByЛичный_номер(int Личный_номер) {
+                return ((_расчет_З_ПRow)(this.Rows.Find(new object[] {
+                            Личный_номер})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _расчет_З_ПDataTable cln = ((_расчет_З_ПDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _расчет_З_ПDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnЛичный_номер = base.Columns["Личный номер"];
+                this.columnФИО = base.Columns["ФИО"];
+                this.columnОклад = base.Columns["Оклад"];
+                this.columnПремия = base.Columns["Премия"];
+                this.columnНадбавки = base.Columns["Надбавки"];
+                this.columnВычет_за_болезни = base.Columns["Вычет за болезни"];
+                this._columnЗ_П = base.Columns["З/П"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnЛичный_номер = new global::System.Data.DataColumn("Личный номер", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЛичный_номер);
+                this.columnФИО = new global::System.Data.DataColumn("ФИО", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnФИО);
+                this.columnОклад = new global::System.Data.DataColumn("Оклад", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОклад);
+                this.columnПремия = new global::System.Data.DataColumn("Премия", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnПремия);
+                this.columnНадбавки = new global::System.Data.DataColumn("Надбавки", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНадбавки);
+                this.columnВычет_за_болезни = new global::System.Data.DataColumn("Вычет за болезни", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnВычет_за_болезни);
+                this._columnЗ_П = new global::System.Data.DataColumn("З/П", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this._columnЗ_П.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnЗ_П");
+                this._columnЗ_П.ExtendedProperties.Add("Generator_UserColumnName", "З/П");
+                base.Columns.Add(this._columnЗ_П);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnЛичный_номер}, true));
+                this.columnЛичный_номер.AllowDBNull = false;
+                this.columnЛичный_номер.Unique = true;
+                this.columnФИО.MaxLength = 255;
+                this.columnОклад.ReadOnly = true;
+                this.columnПремия.ReadOnly = true;
+                this.columnНадбавки.ReadOnly = true;
+                this.columnВычет_за_болезни.ReadOnly = true;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableрасчет_З_П");
+                this.ExtendedProperties.Add("Generator_UserTableName", "расчет З/П");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public _расчет_З_ПRow New_расчет_З_ПRow() {
+                return ((_расчет_З_ПRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _расчет_З_ПRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_расчет_З_ПRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._расчет_З_ПRowChanged != null)) {
+                    this._расчет_З_ПRowChanged(this, new _расчет_З_ПRowChangeEvent(((_расчет_З_ПRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._расчет_З_ПRowChanging != null)) {
+                    this._расчет_З_ПRowChanging(this, new _расчет_З_ПRowChangeEvent(((_расчет_З_ПRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._расчет_З_ПRowDeleted != null)) {
+                    this._расчет_З_ПRowDeleted(this, new _расчет_З_ПRowChangeEvent(((_расчет_З_ПRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._расчет_З_ПRowDeleting != null)) {
+                    this._расчет_З_ПRowDeleting(this, new _расчет_З_ПRowChangeEvent(((_расчет_З_ПRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Remove_расчет_З_ПRow(_расчет_З_ПRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Data ds = new Data();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_расчет_З_ПDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
                     try {
-                        return ((decimal)(this[this._tableрасчет_З_П._З_ПColumn]));
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'З/П\' в таблице \'расчет З/П\' равно DBNull.", e);
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
                     }
                 }
-                set {
-                    this[this._tableрасчет_З_П._З_ПColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsЛичный_номерNull() {
-                return this.IsNull(this._tableрасчет_З_П.Личный_номерColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetЛичный_номерNull() {
-                this[this._tableрасчет_З_П.Личный_номерColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsОкладNull() {
-                return this.IsNull(this._tableрасчет_З_П.ОкладColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetОкладNull() {
-                this[this._tableрасчет_З_П.ОкладColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsПремияNull() {
-                return this.IsNull(this._tableрасчет_З_П.ПремияColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetПремияNull() {
-                this[this._tableрасчет_З_П.ПремияColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsНадбавкиNull() {
-                return this.IsNull(this._tableрасчет_З_П.НадбавкиColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetНадбавкиNull() {
-                this[this._tableрасчет_З_П.НадбавкиColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsВычет_за_болезниNull() {
-                return this.IsNull(this._tableрасчет_З_П.Вычет_за_болезниColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetВычет_за_болезниNull() {
-                this[this._tableрасчет_З_П.Вычет_за_болезниColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is_З_ПNull() {
-                return this.IsNull(this._tableрасчет_З_П._З_ПColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set_З_ПNull() {
-                this[this._tableрасчет_З_П._З_ПColumn] = global::System.Convert.DBNull;
+                xs.Add(dsSchema);
+                return type;
             }
         }
         
@@ -3518,11 +3365,11 @@ namespace fin {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal Надбавка {
                 get {
-                    try {
-                        return ((decimal)(this[this.tableрасчет_надбавки.НадбавкаColumn]));
+                    if (this.IsНадбавкаNull()) {
+                        return 0m;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Надбавка\' в таблице \'расчет надбавки\' равно DBNull.", e);
+                    else {
+                        return ((decimal)(this[this.tableрасчет_надбавки.НадбавкаColumn]));
                     }
                 }
                 set {
@@ -3626,11 +3473,11 @@ namespace fin {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double Оклад {
                 get {
-                    try {
-                        return ((double)(this[this.tableрасчет_оклада.ОкладColumn]));
+                    if (this.IsОкладNull()) {
+                        return 0D;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Оклад\' в таблице \'расчет оклада\' равно DBNull.", e);
+                    else {
+                        return ((double)(this[this.tableрасчет_оклада.ОкладColumn]));
                     }
                 }
                 set {
@@ -3756,28 +3603,11 @@ namespace fin {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal Премия {
                 get {
-                    try {
-                        return ((decimal)(this[this.tableрасчет_премии.ПремияColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Премия\' в таблице \'расчет премии\' равно DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tableрасчет_премии.ПремияColumn]));
                 }
                 set {
                     this[this.tableрасчет_премии.ПремияColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsПремияNull() {
-                return this.IsNull(this.tableрасчет_премии.ПремияColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetПремияNull() {
-                this[this.tableрасчет_премии.ПремияColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4451,36 +4281,196 @@ namespace fin {
         }
         
         /// <summary>
-        ///Row event argument class
+        ///Represents strongly named DataRow class.
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class _расчет_З_ПRowChangeEvent : global::System.EventArgs {
+        public partial class _расчет_З_ПRow : global::System.Data.DataRow {
             
-            private _расчет_З_ПRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
+            private _расчет_З_ПDataTable _tableрасчет_З_П;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public _расчет_З_ПRowChangeEvent(_расчет_З_ПRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
+            internal _расчет_З_ПRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableрасчет_З_П = ((_расчет_З_ПDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public _расчет_З_ПRow Row {
+            public int Личный_номер {
                 get {
-                    return this.eventRow;
+                    return ((int)(this[this._tableрасчет_З_П.Личный_номерColumn]));
+                }
+                set {
+                    this[this._tableрасчет_З_П.Личный_номерColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
+            public string ФИО {
                 get {
-                    return this.eventAction;
+                    try {
+                        return ((string)(this[this._tableрасчет_З_П.ФИОColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'ФИО\' в таблице \'расчет З/П\' равно DBNull.", e);
+                    }
                 }
+                set {
+                    this[this._tableрасчет_З_П.ФИОColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Оклад {
+                get {
+                    try {
+                        return ((decimal)(this[this._tableрасчет_З_П.ОкладColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Оклад\' в таблице \'расчет З/П\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableрасчет_З_П.ОкладColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Премия {
+                get {
+                    try {
+                        return ((decimal)(this[this._tableрасчет_З_П.ПремияColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Премия\' в таблице \'расчет З/П\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableрасчет_З_П.ПремияColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Надбавки {
+                get {
+                    try {
+                        return ((decimal)(this[this._tableрасчет_З_П.НадбавкиColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Надбавки\' в таблице \'расчет З/П\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableрасчет_З_П.НадбавкиColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Вычет_за_болезни {
+                get {
+                    try {
+                        return ((decimal)(this[this._tableрасчет_З_П.Вычет_за_болезниColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Вычет за болезни\' в таблице \'расчет З/П\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableрасчет_З_П.Вычет_за_болезниColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal _З_П {
+                get {
+                    try {
+                        return ((decimal)(this[this._tableрасчет_З_П._З_ПColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'З/П\' в таблице \'расчет З/П\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableрасчет_З_П._З_ПColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsФИОNull() {
+                return this.IsNull(this._tableрасчет_З_П.ФИОColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetФИОNull() {
+                this[this._tableрасчет_З_П.ФИОColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsОкладNull() {
+                return this.IsNull(this._tableрасчет_З_П.ОкладColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetОкладNull() {
+                this[this._tableрасчет_З_П.ОкладColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsПремияNull() {
+                return this.IsNull(this._tableрасчет_З_П.ПремияColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetПремияNull() {
+                this[this._tableрасчет_З_П.ПремияColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsНадбавкиNull() {
+                return this.IsNull(this._tableрасчет_З_П.НадбавкиColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetНадбавкиNull() {
+                this[this._tableрасчет_З_П.НадбавкиColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsВычет_за_болезниNull() {
+                return this.IsNull(this._tableрасчет_З_П.Вычет_за_болезниColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetВычет_за_болезниNull() {
+                this[this._tableрасчет_З_П.Вычет_за_болезниColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Is_З_ПNull() {
+                return this.IsNull(this._tableрасчет_З_П._З_ПColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Set_З_ПNull() {
+                this[this._tableрасчет_З_П._З_ПColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4755,183 +4745,44 @@ namespace fin {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class _расчет_З_ПRowChangeEvent : global::System.EventArgs {
+            
+            private _расчет_З_ПRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public _расчет_З_ПRowChangeEvent(_расчет_З_ПRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public _расчет_З_ПRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace fin.DataTableAdapters {
     
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class расчет_З_ПTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
-        
-        private global::System.Data.OleDb.OleDbConnection _connection;
-        
-        private global::System.Data.OleDb.OleDbTransaction _transaction;
-        
-        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public расчет_З_ПTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.OleDb.OleDbConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.OleDb.OleDbTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "расчет З/П";
-            tableMapping.ColumnMappings.Add("Личный номер", "Личный номер");
-            tableMapping.ColumnMappings.Add("Оклад", "Оклад");
-            tableMapping.ColumnMappings.Add("Премия", "Премия");
-            tableMapping.ColumnMappings.Add("Надбавки", "Надбавки");
-            tableMapping.ColumnMappings.Add("Вычет за болезни", "Вычет за болезни");
-            tableMapping.ColumnMappings.Add("З/П", "З/П");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::fin.Properties.Settings.Default.Database1ConnectionString1;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
-            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Личный номер], Оклад, Премия, Надбавки, [Вычет за болезни], [З/П] FROM [р" +
-                "асчет З/П]";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Data._расчет_З_ПDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Data._расчет_З_ПDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            Data._расчет_З_ПDataTable dataTable = new Data._расчет_З_ПDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -5687,8 +5538,13 @@ namespace fin.DataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Личный_номер, string Original_ФИО, string Original_Должность, string Original_Семейное_положение, global::System.Nullable<int> _Original_Кол_во_детей) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Личный_номер));
+        public virtual int Delete(global::System.Nullable<int> Original_Личный_номер, string Original_ФИО, string Original_Должность, string Original_Семейное_положение, global::System.Nullable<int> _Original_Кол_во_детей) {
+            if ((Original_Личный_номер.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Личный_номер.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((Original_ФИО == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -5741,8 +5597,13 @@ namespace fin.DataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Личный_номер, string ФИО, string Должность, string Семейное_положение, global::System.Nullable<int> _Кол_во_детей) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Личный_номер));
+        public virtual int Insert(global::System.Nullable<int> Личный_номер, string ФИО, string Должность, string Семейное_положение, global::System.Nullable<int> _Кол_во_детей) {
+            if ((Личный_номер.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Личный_номер.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((ФИО == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -5787,8 +5648,13 @@ namespace fin.DataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Личный_номер, string ФИО, string Должность, string Семейное_положение, global::System.Nullable<int> _Кол_во_детей, int Original_Личный_номер, string Original_ФИО, string Original_Должность, string Original_Семейное_положение, global::System.Nullable<int> _Original_Кол_во_детей) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Личный_номер));
+        public virtual int Update(global::System.Nullable<int> Личный_номер, string ФИО, string Должность, string Семейное_положение, global::System.Nullable<int> _Кол_во_детей, global::System.Nullable<int> Original_Личный_номер, string Original_ФИО, string Original_Должность, string Original_Семейное_положение, global::System.Nullable<int> _Original_Кол_во_детей) {
+            if ((Личный_номер.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Личный_номер.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((ФИО == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -5813,7 +5679,12 @@ namespace fin.DataTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Личный_номер));
+            if ((Original_Личный_номер.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Личный_номер.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             if ((Original_ФИО == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
@@ -5866,7 +5737,7 @@ namespace fin.DataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ФИО, string Должность, string Семейное_положение, global::System.Nullable<int> _Кол_во_детей, int Original_Личный_номер, string Original_ФИО, string Original_Должность, string Original_Семейное_положение, global::System.Nullable<int> _Original_Кол_во_детей) {
+        public virtual int Update(string ФИО, string Должность, string Семейное_положение, global::System.Nullable<int> _Кол_во_детей, global::System.Nullable<int> Original_Личный_номер, string Original_ФИО, string Original_Должность, string Original_Семейное_положение, global::System.Nullable<int> _Original_Кол_во_детей) {
             return this.Update(Original_Личный_номер, ФИО, Должность, Семейное_положение, _Кол_во_детей, Original_Личный_номер, Original_ФИО, Original_Должность, Original_Семейное_положение, _Original_Кол_во_детей);
         }
     }
@@ -7363,6 +7234,180 @@ namespace fin.DataTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class расчет_З_ПTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public расчет_З_ПTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "расчет З/П";
+            tableMapping.ColumnMappings.Add("Личный номер", "Личный номер");
+            tableMapping.ColumnMappings.Add("ФИО", "ФИО");
+            tableMapping.ColumnMappings.Add("Оклад", "Оклад");
+            tableMapping.ColumnMappings.Add("Премия", "Премия");
+            tableMapping.ColumnMappings.Add("Надбавки", "Надбавки");
+            tableMapping.ColumnMappings.Add("Вычет за болезни", "Вычет за болезни");
+            tableMapping.ColumnMappings.Add("З/П", "З/П");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::fin.Properties.Settings.Default.Database1ConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT [Личный номер], ФИО, Оклад, Премия, Надбавки, [Вычет за болезни], [З/П] FR" +
+                "OM [расчет З/П]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Data._расчет_З_ПDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Data._расчет_З_ПDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Data._расчет_З_ПDataTable dataTable = new Data._расчет_З_ПDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
