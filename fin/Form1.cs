@@ -60,6 +60,7 @@ namespace fin
         {
             if (e.KeyCode == Keys.Delete)
             {
+
                 if (MessageBox.Show("Удалить запись?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     личныеДанныеBindingSource.RemoveCurrent();
             }
@@ -74,9 +75,7 @@ namespace fin
                 txtName.Focus();
                 this.data.Личные_данные.AddЛичные_данныеRow(this.data.Личные_данные.NewЛичные_данныеRow());
                 личныеДанныеBindingSource.MoveLast();
-
-                this.data.Оклад.AddОкладRow(this.data.Оклад.NewОкладRow());//
-                окладBindingSource.MoveLast();//   
+  
             }
             catch (Exception ex)
             {
@@ -103,8 +102,6 @@ namespace fin
             {
                 личныеДанныеBindingSource.EndEdit();
                 личные_данныеTableAdapter.Update(this.data.Личные_данные);
-                окладBindingSource.EndEdit();
-                окладTableAdapter.Update(this.data.Оклад);
                 panel.Enabled = false;
             }
             catch (Exception ex)
@@ -156,6 +153,7 @@ namespace fin
             this.личные_данныеTableAdapter.Fill(this.data.Личные_данные);
         }
 
+        //оклад
         private void button1_Click(object sender, EventArgs e)
         {
             Form6 newForm = new Form6();

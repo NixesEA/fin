@@ -22,12 +22,18 @@ namespace fin
             // TODO: данная строка кода позволяет загрузить данные в таблицу "data.Оклад". При необходимости она может быть перемещена или удалена.
             this.окладTableAdapter.Fill(this.data.Оклад);
 
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
             try
             {
+                textBox1.Enabled = true;
+                textBox2.Enabled = true;
+
                 this.data.Личные_данные.AddЛичные_данныеRow(this.data.Личные_данные.NewЛичные_данныеRow());
                 окладBindingSource.MoveLast();
 
@@ -43,13 +49,13 @@ namespace fin
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-           // panel.Enabled = true;
-            //txtName.Focus();
+            textBox1.Enabled = true;
+            textBox2.Enabled = true;
+            textBox2.Focus();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            //panel.Enabled = false;
             окладBindingSource.ResetBindings(false);
         }
 
@@ -61,7 +67,9 @@ namespace fin
                 окладTableAdapter.Update(this.data.Оклад);
                 окладBindingSource.EndEdit();
                 окладTableAdapter.Update(this.data.Оклад);
-               // panel.Enabled = false;
+
+                textBox1.Enabled = false;
+                textBox2.Enabled = false;
             }
             catch (Exception ex)
             {
